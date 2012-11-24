@@ -7,7 +7,7 @@ from urllib.error import URLError, HTTPError
 
 
 
-req = Request('http://www.toptalent.in/faq.php?id=67')
+req = Request('http://www.google.com')
 try:
     response = urlopen(req)
 except HTTPError as e:
@@ -22,7 +22,4 @@ else:
     webcontent = response.read();
     webcontent = str(webcontent,"UTF-8");
     contentlength = len(webcontent);
-    if contentlength!=53094:
-        print(str(contentlength)+" : "+webcontent);
-    else:
-        print(contentlength);
+    print(contentlength);
